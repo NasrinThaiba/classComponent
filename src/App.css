@@ -1,0 +1,139 @@
+/* ==== GLOBAL ==== */
+body {
+  font-family: "Inter", Arial, sans-serif;
+  background: #eef1f5;
+  padding: 40px 0;
+  margin: 0;
+}
+
+/* ==== CARD WRAPPER ==== */
+.todo-card {
+  width: 550px;
+  margin: 0 auto 35px;
+  padding: 25px 30px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ==== TITLES ==== */
+h3 {
+  margin-top: 25px;
+  font-size: 20px;
+  color: #1f2937;
+}
+
+label {
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ==== FORM ==== */
+form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.2s;
+}
+
+input[type="text"]:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+/* ==== SUBMIT BUTTON ==== */
+button[type="submit"] {
+  padding: 12px 16px;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+button[type="submit"]:hover {
+  background: #1e40af;
+}
+
+/* ==== TODO LIST ==== */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+li {
+  background: #f9fafb;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ==== ACTION BUTTONS ==== */
+.todo-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.delete-btn,
+.edit-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.delete-btn {
+  background: #ef4444;
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
+}
+
+.edit-btn {
+  background: #f59e0b;
+}
+
+.edit-btn:hover {
+  background: #d97706;
+}
+
+/* ==== COUNT DISPLAY ==== */
+.count-text {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ==== COUNT BOX (Class Component Count) ==== */
+.count-box {
+  background: #f3f4f6;
+  padding: 18px;
+  border-radius: 12px;
+  margin-top: 20px;
+  font-weight: 600;
+  color: #1f2937;
+  text-align: center;
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.05);
+}

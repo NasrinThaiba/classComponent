@@ -4,7 +4,7 @@ import "./App.css"
 export default function FunctionApp(){
     
     const [input, setInput] = useState("");
-    const [todos, setTodos] = useState([]);
+    const [todos, setTodos] = useState(["New Sample Todo"]);
     const [edit, setEdit] = useState(null);
 
     const handleChange = (e) => {
@@ -15,9 +15,7 @@ export default function FunctionApp(){
         e.preventDefault();
 
         if(edit !== null) {
-            setTodos((prevTodo) => prevTodo.map((todo, i) => {
-                i === edit ? input : todo
-            }))
+            setTodos((prevTodo) => prevTodo.map((todo, i) => i === edit ? input : todo))
             setEdit(null);
         }else {
           setTodos((prevTodo) => [...prevTodo, input])
@@ -53,6 +51,8 @@ export default function FunctionApp(){
                     </li>
                 )) }
             </ul>
+
+            <p>Count: {todos.length}</p>
         </div>
     )
 }

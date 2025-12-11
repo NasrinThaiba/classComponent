@@ -7,7 +7,7 @@ class ClassApp extends Component {
         super(props);
 
         this.state = {
-            todos : [],
+            todos : ["New Class Todo"],
             input : "",
             edit : null,
         }
@@ -25,13 +25,16 @@ class ClassApp extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
+
         if(this.state.edit !== null) {
             this.setState((state) => ({
-                todos: state.todos.map((todo, i) => {
-                    i === state.edit ? state.input : todo
-                }), 
+                todos: state.todos.map((todo, i) => (
+                    i === state.edit ? state.input : todo    
+                )), 
+                input: "",
                 edit : null,
             }))
+            
         }else {
         this.setState((state) => ({
          todos: [...state.todos, state.input],
@@ -47,9 +50,6 @@ class ClassApp extends Component {
     }
 
     handleEdit = (index) => {
-    //    this.setState.edit[index];
-    //    this.setState.input(this.state.todos[index]);
-
     this.setState({
         edit : index,
         input: this.state.todos[index]
@@ -61,7 +61,7 @@ class ClassApp extends Component {
             <div className="todo-card">
              <form onSubmit={this.handleSubmit}>
                 <label htmlFor ="todo"> Class ToDo </label>
-                    <input type="text" id ="todo" name="todo-class" value={this.state.input}  onChange={this.handleChange} />
+                    <input type="text" id ="todo" name="todo" value={this.state.input}  onChange={this.handleChange} />
              <button type="submit" > 
                 {this.state.edit !== null ? "Update" : "Submit"}
                 </button>

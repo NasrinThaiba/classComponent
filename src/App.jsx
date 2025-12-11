@@ -42,7 +42,7 @@ export default function App(){
     <h3>Function Todo-List</h3>
     <ul>
     {todos.map((todo, i) => (
-      <li key={todo.name}>{todo}
+      <li key={i}>{todo}
       <button className="delete-btn" onClick={() => handleDelete(i)}>Delete</button>
       <button className="edit-btn" onClick={() => handleEdit(i)}> Edit </button>
       </li>

@@ -37,7 +37,9 @@ export default function App(){
     <form onSubmit={handleSubmit}>
       <label htmlFor="todo">Function ToDo</label>
       <input id="todo" name="todo" type="text" value={input} onChange={handleChange}/>
-      <button type="submit">Submit</button>
+      <button type="submit">
+        { edit !== null ? "Update" : "Submit" }
+      </button>
     </form>
     <h3>Function Todo-List</h3>
     <ul>

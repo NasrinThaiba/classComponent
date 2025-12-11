@@ -12,10 +12,15 @@ class ClassApp extends Component {
             edit : null,
         }
 
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleDelete = this.handleDelete.bind(this);
-        this.handleEdit = this.handleEdit.bind(this);
+        // this.handleChange = this.handleChange.bind(this);
+        // this.handleSubmit = this.handleSubmit.bind(this);
+        // this.handleDelete = this.handleDelete.bind(this);
+        // this.handleEdit = this.handleEdit.bind(this);
+
+        this.handleChange = this.handleChange;
+        this.handleSubmit = this.handleSubmit;
+        this.handleDelete = this.handleDelete;
+        this.handleEdit = this.handleEdit;
     }
     handleChange = (e) => {
         this.setState({
